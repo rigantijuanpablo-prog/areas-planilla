@@ -6,31 +6,76 @@
 <title>Derecho de Familia y Sucesiones | RGMA</title>
 <meta name="description" content="Familia y sucesiones en RGMA: régimen patrimonial, divorcios, convivencia, planificación sucesoria, empresa familiar y protección de la vivienda.">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@300;400;600&display=swap" rel="stylesheet">
+<!-- ESTILO MARVAL PARA RGMA - FAMILIA Y SUCESIONES -->
 <style>
-:root{--navy:#0A1931;--gold:#C8B090;--paper:#fcfcfc}
+:root{--navy:#0A1931;--marval-blue:#2B4F8D;--gold:#C8B090}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',sans-serif;background:var(--paper);color:#1a1a1a}
-.hero-area{position:relative;display:grid;grid-template-columns:1.15fr .85fr;min-height:0;background:var(--navy);overflow:hidden;isolation:isolate}
-.a-left{display:flex;flex-direction:column;justify-content:center;padding:56px 5% 56px 6%;background:var(--navy)}
-.a-right{position:relative;overflow:hidden;background:#0E2447;min-height:380px}
-.a-right img{width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0}
-.a-right::after{content:none!important}
-.eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
-.h1{font-family:'Playfair Display';font-size:clamp(28px,3.2vw,44px);color:#fff;line-height:.95;font-weight:300}
-.desc{font-size:13.5px;line-height:1.7;color:rgba(255,255,255,.62);max-width:400px;margin-top:18px;font-weight:300}
-.wrap{max-width:1280px;margin:0 auto;padding:64px 40px;display:grid;grid-template-columns:1.25fr .75fr;gap:80px}
-.bullets{list-style:none;margin-top:12px}
-.bullets li{padding:20px 0;border-bottom:1px solid #EDE9E1;display:grid;grid-template-columns:28px 1fr;gap:16px}
-.bullets li:last-child{border:0}
-.num{font-size:10px;color:var(--gold);font-weight:700;letter-spacing:2px;margin-top:4px}
-.bullets b{font-family:'Playfair Display';font-size:15px;color:var(--navy);display:block;margin-bottom:6px;font-weight:600}
-.bullets span{font-size:13px;line-height:1.7;color:#5A6B82;display:block}
-.card{border:1px solid #EAEAEA;padding:28px;background:#fff;position:sticky;top:90px}
-.btn{display:block;text-align:center;padding:14px;font-size:10px;letter-spacing:2.5px;text-decoration:none;font-weight:700;margin-top:10px}
-.btn.gold{background:var(--gold);color:var(--navy)}
-.btn.navy{background:var(--navy);color:#fff}
-@media(max-width:900px){.hero-area{grid-template-columns:1fr}.a-right{min-height:280px}.wrap{grid-template-columns:1fr;padding:36px 24px}.card{position:relative;top:0}}
+body{font-family:'Inter',sans-serif}
+.top-title{max-width:1280px;margin:0 auto;padding:56px 40px 32px}
+.top-title h1{font-family:'Playfair Display';font-size:38px;font-weight:400;color:#111827}
+.tabs{background:var(--marval-blue);display:flex;justify-content:center;gap:48px}
+.tabs a{color:#fff;text-decoration:none;font-size:11px;letter-spacing:1.5px;font-weight:700;padding:16px 0;border-bottom:3px solid transparent}
+.tabs a.active{border-bottom-color:#fff}
+.layout{max-width:1280px;margin:0 auto;padding:40px;display:grid;grid-template-columns:1.2fr .6fr;gap:80px}
+.bullets{list-style:none;margin-top:20px}
+.bullets li{margin-bottom:16px;font-size:14px;line-height:1.6;color:#374151}
+.bullets b{color:#111827}
+.contact-box{border-left:1px solid #E5E7EB;padding-left:32px}
+.contact-item{display:flex;gap:14px;align-items:center;margin-bottom:22px}
+.contact-item img{width:62px;height:72px;object-fit:cover;display:block;background:#eee}
+.contact-item .name{font-size:14px;font-weight:700;color:#111827;line-height:1.2}
+.contact-item .role{font-size:12px;color:#6B7280;margin-top:2px}
+@media(max-width:900px){.layout{grid-template-columns:1fr;padding:24px}.contact-box{border-left:0;padding-left:0;border-top:1px solid #eee;padding-top:24px}.tabs{gap:16px;overflow:auto}}
 </style>
+
+<div class="top-title"><h1>Derecho de Familia y Sucesiones</h1></div>
+<div class="tabs">
+  <a href="#info" class="active">INFORMACIÓN GENERAL</a>
+  <a href="#contactos">CONTACTOS</a>
+  <a href="#contenido">CONTENIDO</a>
+</div>
+
+<div class="layout" id="info">
+  <div>
+    <p style="font-size:14.5px;line-height:1.7;color:#374151">El departamento de <b>Derecho de Familia y Sucesiones</b> de RGMA asesora a sus clientes en un amplio espectro de asuntos relacionados con esta temática.</p>
+    <p style="font-size:14.5px;line-height:1.7;color:#374151;margin-top:18px">Nuestros profesionales son reconocidos por su experiencia en derecho patrimonial, planificación fiscal sucesoria y prevención de conflictos en empresas familiares. Estas son áreas que tienen importantes puntos de contacto con las disputas que se producen en el ámbito familiar y sucesorio. Nuestro equipo tiene gran experiencia en casos complejos, sensibles y estratégicos.</p>
+    <p style="font-size:14px;font-weight:700;margin-top:28px">Brindamos una amplia gama de servicios, entre los que podemos destacar:</p>
+    
+    <ul class="bullets">
+      <li><b>a. Régimen patrimonial del matrimonio:</b> análisis de la conveniencia de optar por comunidad o separación de bienes; convenciones matrimoniales; administración de bienes y modificaciones del régimen.</li>
+      <li><b>b. Acuerdos derivados del divorcio:</b> atribución de la vivienda, división de bienes, compensaciones económicas, alimentos post-divorcio, responsabilidad parental y régimen de comunicación.</li>
+      <li><b>c. Juicios de divorcio y liquidación:</b> divorcios, extinción de comunidad, medidas cautelares y compensaciones en contextos complejos.</li>
+      <li><b>d. Convivencia:</b> pactos de convivencia, bienes adquiridos, compensaciones, protección de vivienda familiar.</li>
+      <li><b>e. Planificación sucesoria:</b> donaciones en vida, testamentos y partición anticipada.</li>
+      <li><b>f. Empresa Familiar:</b> prevención de conflictos y protocolos familiares.</li>
+      <li><b>g. Sucesiones testamentarias y ab-intestato</b> con componentes nacionales y extranjeros.</li>
+      <li><b>h. Capacidad y autoprotección:</b> directivas anticipadas y actos de autoprotección.</li>
+      <li><b>i. Filiación.</b></li>
+    </ul>
+  </div>
+
+  <div class="contact-box" id="contactos">
+    <h3 style="font-size:18px;font-weight:400;margin-bottom:20px">Contactos</h3>
+    
+    <div class="contact-item">
+      <img src="socia-familia.jpg" alt="Socia a cargo">
+      <div>
+        <div style="font-size:9px;letter-spacing:2px;color:var(--marval-blue);font-weight:700;margin-bottom:2px">SOCIA A CARGO</div>
+        <div class="name">Dra. [Nombre Apellido]</div>
+        <div class="role">Socia</div>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <img src="asociado-familia.jpg" alt="Asociado">
+      <div>
+        <div class="name">[Nombre Apellido]</div>
+        <div class="role">Asociado</div>
+      </div>
+    </div>
+
+  </div>
+</div>
 </head>
 <body>
 
