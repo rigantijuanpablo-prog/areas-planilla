@@ -4,125 +4,138 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Derecho de Familia y Sucesiones | RGMA</title>
-<meta name="description" content="Familia y sucesiones en RGMA: régimen patrimonial, divorcios, convivencia, planificación sucesoria, empresa familiar y protección de la vivienda.">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@300;400;600&display=swap" rel="stylesheet">
-<!-- ESTILO MARVAL PARA RGMA - FAMILIA Y SUCESIONES -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#0A1931;--marval-blue:#2B4F8D;--gold:#C8B090}
+:root{
+  --navy:#0A1931;
+  --ink:#111827;
+  --muted:#6B7280;
+  --line:#E8E2D6;
+  --paper:#FCFBF9;
+  --gold:#C8B090;
+}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',sans-serif}
-.top-title{max-width:1280px;margin:0 auto;padding:56px 40px 32px}
-.top-title h1{font-family:'Playfair Display';font-size:38px;font-weight:400;color:#111827}
-.tabs{background:var(--marval-blue);display:flex;justify-content:center;gap:48px}
-.tabs a{color:#fff;text-decoration:none;font-size:11px;letter-spacing:1.5px;font-weight:700;padding:16px 0;border-bottom:3px solid transparent}
-.tabs a.active{border-bottom-color:#fff}
-.layout{max-width:1280px;margin:0 auto;padding:40px;display:grid;grid-template-columns:1.2fr .6fr;gap:80px}
-.bullets{list-style:none;margin-top:20px}
-.bullets li{margin-bottom:16px;font-size:14px;line-height:1.6;color:#374151}
-.bullets b{color:#111827}
-.contact-box{border-left:1px solid #E5E7EB;padding-left:32px}
-.contact-item{display:flex;gap:14px;align-items:center;margin-bottom:22px}
-.contact-item img{width:62px;height:72px;object-fit:cover;display:block;background:#eee}
-.contact-item .name{font-size:14px;font-weight:700;color:#111827;line-height:1.2}
-.contact-item .role{font-size:12px;color:#6B7280;margin-top:2px}
-@media(max-width:900px){.layout{grid-template-columns:1fr;padding:24px}.contact-box{border-left:0;padding-left:0;border-top:1px solid #eee;padding-top:24px}.tabs{gap:16px;overflow:auto}}
+body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
+
+/* HEADER CON LOGO DERECHA */
+.header{max-width:1320px;margin:0 auto;padding:28px 48px 26px;display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid var(--line)}
+.header-left .eyebrow{font-size:9px;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold);font-weight:600}
+.header-left h1{font-family:'Playfair Display';font-size:40px;font-weight:300;color:var(--navy);margin-top:10px;line-height:.95;letter-spacing:-0.5px}
+.header-right .logo{font-family:'Playfair Display';font-size:22px;letter-spacing:4px;font-weight:600;color:var(--navy);line-height:1;text-align:right}
+.header-right .logo small{display:block;font-family:'Inter';font-size:8px;letter-spacing:3px;font-weight:500;color:var(--muted);margin-top:4px}
+
+/* TABS */
+.tabs-wrap{background:var(--navy)}
+.tabs{max-width:1320px;margin:0 auto;padding:0 48px;display:flex;gap:40px}
+.tabs a{color:rgba(255,255,255,.55);text-decoration:none;font-size:10px;letter-spacing:2.2px;font-weight:600;padding:18px 0;border-bottom:1px solid transparent;transition:.2s}
+.tabs a.active{color:#fff;border-bottom-color:var(--gold)}
+
+/* LAYOUT */
+.layout{max-width:1320px;margin:0 auto;padding:56px 48px 80px;display:grid;grid-template-columns:1.35fr .65fr;gap:88px}
+.lead{font-family:'Playfair Display';font-size:21px;line-height:1.5;color:var(--navy);font-style:italic;font-weight:300;border-left:2px solid var(--gold);padding-left:24px;margin-bottom:36px}
+.copy{font-size:14.5px;line-height:1.85;color:#374151}
+.services-title{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--navy);font-weight:700;margin-top:48px;margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.services-title::after{content:"";height:1px;flex:1;background:var(--line)}
+.list{list-style:none}
+.list li{padding:18px 0;border-bottom:1px solid #F0EBE0;display:grid;grid-template-columns:24px 1fr;gap:12px}
+.list li:last-child{border:0}
+.list .l{font-size:10px;color:var(--gold);font-weight:700;margin-top:4px}
+.list .t{font-family:'Playfair Display';font-size:14.5px;font-weight:600;color:var(--navy);margin-bottom:4px}
+.list .d{font-size:13px;line-height:1.7;color:var(--muted)}
+
+/* BLOQUE CONTACTO SOCIO PREMIUM */
+.side{position:sticky;top:40px}
+.contact-card{background:#fff;border:1px solid var(--line);padding:0;overflow:hidden}
+.contact-head{padding:20px 26px 16px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+.contact-head span{font-size:9px;letter-spacing:3px;text-transform:uppercase;font-weight:700;color:var(--navy)}
+.contact-head i{font-size:9px;letter-spacing:2px;color:var(--gold);font-style:normal;font-weight:700}
+.socio{padding:26px;display:flex;gap:18px;align-items:flex-start}
+.socio-photo{width:84px;height:84px;background:#F3F1ED;border:1px solid var(--line);overflow:hidden;flex-shrink:0}
+.socio-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(15%)}
+.socio-name{font-family:'Playfair Display';font-size:17px;font-weight:600;color:var(--navy);line-height:1.2}
+.socio-role{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:6px}
+.socio-meta{margin-top:14px}
+.socio-meta div{font-size:12.5px;color:var(--ink);line-height:1.6}
+.socio-meta a{color:var(--navy);text-decoration:none;font-weight:500;border-bottom:1px solid var(--line)}
+.socio-meta .muted{font-size:11.5px;color:var(--muted);margin-top:8px}
+.contact-foot{padding:18px 26px;background:#FCFBF9;border-top:1px solid var(--line)}
+.btn{display:block;text-align:center;padding:13px;font-size:9.5px;letter-spacing:2.5px;text-decoration:none;font-weight:700;transition:.2s}
+.btn-dark{background:var(--navy);color:#fff}
+.btn-dark:hover{background:#132a54}
+
+@media(max-width:980px){.header,.tabs,.layout{padding-left:24px;padding-right:24px}.layout{grid-template-columns:1fr;gap:40px}.header{flex-direction:column}.header-right .logo{text-align:left}.side{position:relative}}
 </style>
-
-<div class="top-title"><h1>Derecho de Familia y Sucesiones</h1></div>
-<div class="tabs">
-  <a href="#info" class="active">INFORMACIÓN GENERAL</a>
-  <a href="#contactos">CONTACTOS</a>
-  <a href="#contenido">CONTENIDO</a>
-</div>
-
-<div class="layout" id="info">
-  <div>
-    <p style="font-size:14.5px;line-height:1.7;color:#374151">El departamento de <b>Derecho de Familia y Sucesiones</b> de RGMA asesora a sus clientes en un amplio espectro de asuntos relacionados con esta temática.</p>
-    <p style="font-size:14.5px;line-height:1.7;color:#374151;margin-top:18px">Nuestros profesionales son reconocidos por su experiencia en derecho patrimonial, planificación fiscal sucesoria y prevención de conflictos en empresas familiares. Estas son áreas que tienen importantes puntos de contacto con las disputas que se producen en el ámbito familiar y sucesorio. Nuestro equipo tiene gran experiencia en casos complejos, sensibles y estratégicos.</p>
-    <p style="font-size:14px;font-weight:700;margin-top:28px">Brindamos una amplia gama de servicios, entre los que podemos destacar:</p>
-    
-    <ul class="bullets">
-      <li><b>a. Régimen patrimonial del matrimonio:</b> análisis de la conveniencia de optar por comunidad o separación de bienes; convenciones matrimoniales; administración de bienes y modificaciones del régimen.</li>
-      <li><b>b. Acuerdos derivados del divorcio:</b> atribución de la vivienda, división de bienes, compensaciones económicas, alimentos post-divorcio, responsabilidad parental y régimen de comunicación.</li>
-      <li><b>c. Juicios de divorcio y liquidación:</b> divorcios, extinción de comunidad, medidas cautelares y compensaciones en contextos complejos.</li>
-      <li><b>d. Convivencia:</b> pactos de convivencia, bienes adquiridos, compensaciones, protección de vivienda familiar.</li>
-      <li><b>e. Planificación sucesoria:</b> donaciones en vida, testamentos y partición anticipada.</li>
-      <li><b>f. Empresa Familiar:</b> prevención de conflictos y protocolos familiares.</li>
-      <li><b>g. Sucesiones testamentarias y ab-intestato</b> con componentes nacionales y extranjeros.</li>
-      <li><b>h. Capacidad y autoprotección:</b> directivas anticipadas y actos de autoprotección.</li>
-      <li><b>i. Filiación.</b></li>
-    </ul>
-  </div>
-
-  <div class="contact-box" id="contactos">
-    <h3 style="font-size:18px;font-weight:400;margin-bottom:20px">Contactos</h3>
-    
-    <div class="contact-item">
-      <img src="socia-familia.jpg" alt="Socia a cargo">
-      <div>
-        <div style="font-size:9px;letter-spacing:2px;color:var(--marval-blue);font-weight:700;margin-bottom:2px">SOCIA A CARGO</div>
-        <div class="name">Dra. [Nombre Apellido]</div>
-        <div class="role">Socia</div>
-      </div>
-    </div>
-
-    <div class="contact-item">
-      <img src="asociado-familia.jpg" alt="Asociado">
-      <div>
-        <div class="name">[Nombre Apellido]</div>
-        <div class="role">Asociado</div>
-      </div>
-    </div>
-
-  </div>
-</div>
 </head>
 <body>
 
-<div class="hero-area">
-  <div class="a-left">
-    <div class="eyebrow">02 — FAMILIA & SUCESIONES</div>
-    <h1 class="h1">Derecho de Familia<br>y Sucesiones</h1>
-    <p class="desc">Asesoramiento integral con sensibilidad humana y rigor patrimonial. Prevenimos conflictos, ordenamos el presente y protegemos el futuro de la familia.</p>
+<header class="header">
+  <div class="header-left">
+    <div class="eyebrow">RGMA · Desde 1948 · Área 02</div>
+    <h1>Derecho de Familia<br>y Sucesiones</h1>
   </div>
-  <div class="a-right"><img src="familia-sucesiones.jpg" alt="Familia y sucesiones RGMA"></div>
+  <div class="header-right">
+    <!-- CAMBIA ESTO POR TU LOGO REAL -->
+    <div class="logo">RGMA<small>ABOGADOS · EST. 1948</small></div>
+    <!-- EJ: <img src="logo-rgma.svg" alt="RGMA" style="height:30px"> -->
+  </div>
+</header>
+
+<div class="tabs-wrap">
+  <nav class="tabs">
+    <a href="#info" class="active">INFORMACIÓN GENERAL</a>
+    <a href="#contacto">CONTACTO</a>
+  </nav>
 </div>
 
-<div class="wrap">
-  <div>
-    <p style="font-family:'Playfair Display';font-size:21px;line-height:1.4;color:var(--navy);font-style:italic;margin-bottom:32px">Brindamos una cobertura completa para la organización familiar y la transmisión ordenada del patrimonio, en sede extrajudicial y judicial.</p>
-    <ul class="bullets">
-      <li><div class="num">01</div><div><b>Régimen patrimonial del matrimonio</b><span>Asesoramiento para elegir entre comunidad de ganancias y separación de bienes. Diseño y redacción de convenciones matrimoniales y adecuación del régimen durante el matrimonio.</span></div></li>
-      <li><div class="num">02</div><div><b>Acuerdos por divorcio y efectos personales</b><span>Negociación de atribución del hogar, distribución del patrimonio, compensaciones, alimentos, cuidado de los hijos y régimen de comunicación.</span></div></li>
-      <li><div class="num">03</div><div><b>Litigio de divorcio y liquidación</b><span>Divorcios controvertidos, liquidación de bienes, fecha de disolución de la comunidad y medidas cautelares patrimoniales.</span></div></li>
-      <li><div class="num">04</div><div><b>Convivencia y uniones convivenciales</b><span>Pactos de convivencia, bienes adquiridos, compensaciones y protección del hogar familiar.</span></div></li>
-      <li><div class="num">05</div><div><b>Planificación sucesoria y patrimonial</b><span>Donaciones con reserva, testamentos válidos y particiones anticipadas para evitar litigios.</span></div></li>
-      <li><div class="num">06</div><div><b>Empresa familiar y protocolo</b><span>Protocolos familiares, acuerdos de accionistas y reglas de incorporación de nuevas generaciones.</span></div></li>
-      <li><div class="num">07</div><div><b>Sucesiones nacionales e internacionales</b><span>Sucesiones testamentarias y ab intestato con bienes o herederos en el exterior.</span></div></li>
-      <li><div class="num">08</div><div><b>Capacidad, directivas anticipadas y autoprotección</b><span>Determinación de capacidad, directivas médicas anticipadas y mandatos de autoprotección.</span></div></li>
-      <li><div class="num">09</div><div><b>Filiación y vínculos</b><span>Acciones de filiación, reconocimiento e impugnación y protección de niños y adolescentes.</span></div></li>
+<main class="layout">
+  <div id="info">
+    <div class="lead">Cobertura completa para la organización familiar y la transmisión ordenada del patrimonio, con foco en prevención y sensibilidad.</div>
+    <div class="copy">
+      <p>El departamento de <b>Derecho de Familia y Sucesiones</b> de RGMA asesora en un amplio espectro de asuntos vinculados a la familia y el patrimonio.</p>
+      <p style="margin-top:14px">Reconocidos por nuestra experiencia en derecho patrimonial, planificación fiscal sucesoria y prevención de conflictos en empresas familiares.</p>
+    </div>
+    <div class="services-title">Servicios destacados</div>
+    <ul class="list">
+      <li><span class="l">a.</span><div><div class="t">Régimen patrimonial del matrimonio</div><div class="d">Comunidad vs separación de bienes. Convenciones matrimoniales y adecuación del régimen.</div></div></li>
+      <li><span class="l">b.</span><div><div class="t">Acuerdos por divorcio</div><div class="d">Vivienda, división de bienes, compensaciones, alimentos, cuidado personal y comunicación.</div></div></li>
+      <li><span class="l">c.</span><div><div class="t">Juicios de divorcio y liquidación</div><div class="d">Extinción de comunidad, medidas cautelares y conflictos complejos.</div></div></li>
+      <li><span class="l">d.</span><div><div class="t">Convivencia</div><div class="d">Pactos de convivencia y protección de vivienda familiar.</div></div></li>
+      <li><span class="l">e.</span><div><div class="t">Planificación sucesoria</div><div class="d">Donaciones con reserva, testamentos y partición anticipada.</div></div></li>
+      <li><span class="l">f.</span><div><div class="t">Empresa familiar</div><div class="d">Protocolo familiar y continuidad generacional.</div></div></li>
+      <li><span class="l">g.</span><div><div class="t">Sucesiones</div><div class="d">Nacionales e internacionales.</div></div></li>
+      <li><span class="l">h.</span><div><div class="t">Capacidad y autoprotección</div><div class="d">Directivas anticipadas y mandatos de autoprotección.</div></div></li>
+      <li><span class="l">i.</span><div><div class="t">Filiación</div><div class="d">Acciones de filiación y protección integral.</div></div></li>
     </ul>
   </div>
 
-  <div>
-    <div class="card">
-      <span style="font-size:9px;letter-spacing:3px;color:var(--gold);font-weight:700">RGMA — CONSULTA DIRECTA</span>
-      <h3 style="font-family:'Playfair Display';font-size:21px;color:var(--navy);margin:12px 0 16px;line-height:1.1">¿Necesitás ordenar tu situación familiar?</h3>
-      <div style="display:flex;gap:14px;align-items:center;background:#FAFAF8;border:1px solid #EDE9E1;padding:14px;margin:16px 0 20px">
-        <div style="width:56px;height:56px;background:#EAEAEA;border-radius:50%;overflow:hidden;flex-shrink:0">
-          <img src="socia-familia.jpg" alt="Socia a cargo" style="width:100%;height:100%;object-fit:cover;display:block">
+  <!-- CONTACTO SOCIO CON FOTO -->
+  <aside class="side" id="contacto">
+    <div class="contact-card">
+      <div class="contact-head">
+        <span>CONTACTO</span>
+        <i>SOCIO</i>
+      </div>
+      
+      <div class="socio">
+        <div class="socio-photo">
+          <img src="socio-familia.jpg" alt="Socio RGMA">
         </div>
         <div>
-          <div style="font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:3px">SOCIA A CARGO</div>
-          <div style="font-family:'Playfair Display';font-size:14px;font-weight:700;color:var(--navy)">Dra. [Nombre y Apellido]</div>
-          <div style="font-size:11px;color:#6b7280;margin-top:2px"><a href="mailto:familia@rgma.com.ar" style="color:var(--navy);text-decoration:none;font-weight:600">familia@rgma.com.ar</a></div>
+          <div class="socio-name">Dr. [Nombre Apellido]</div>
+          <div class="socio-role">Socio · Familia y Sucesiones</div>
+          <div class="socio-meta">
+            <div><a href="mailto:familia@rgma.com.ar">familia@rgma.com.ar</a></div>
+            <div class="muted">T° XX F° XX CPACF<br>+54 11 XXXX-XXXX<br>Buenos Aires, Argentina</div>
+          </div>
         </div>
       </div>
-      <a class="btn gold" href="#contacto">SOLICITAR ENTREVISTA</a>
-      <a class="btn navy" href="/areas">VER TODAS LAS ÁREAS</a>
+
+      <div class="contact-foot">
+        <a href="#consulta" class="btn btn-dark">CONTACTAR AL SOCIO</a>
+      </div>
     </div>
-  </div>
-</div>
+  </aside>
+</main>
 
 </body>
 </html>
