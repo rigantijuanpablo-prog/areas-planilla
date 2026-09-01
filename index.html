@@ -6,20 +6,15 @@
 <title>Derecho de Familia y Sucesiones | RGMA</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-:root{
-  --navy:#0A1931;
-  --ink:#111827;
-  --muted:#6B7280;
-  --line:#E8E2D6;
-  --paper:#FCFBF9;
-  --gold:#C8B090;
-}
+:root{--navy:#0A1931;--ink:#111827;--muted:#6B7280;--line:#E8E2D6;--paper:#FCFBF9;--gold:#C8B090}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
 .header{max-width:1320px;margin:0 auto;padding:28px 48px 26px;display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid var(--line)}
 .header-left .eyebrow{font-size:9px;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold);font-weight:600}
 .header-left h1{font-family:'Playfair Display';font-size:40px;font-weight:300;color:var(--navy);margin-top:10px;line-height:.95;letter-spacing:-0.5px}
-.header-right .logo{font-family:'Playfair Display';font-size:22px;letter-spacing:4px;font-weight:600;color:var(--navy);line-height:1;text-align:right}
+.header-right{text-align:right;display:flex;flex-direction:column;align-items:flex-end}
+.header-right .logo{font-family:'Playfair Display';font-size:22px;letter-spacing:4px;font-weight:600;color:var(--navy);line-height:1}
+.header-right .logo-icon{margin-top:12px;width:68px;height:auto;display:block;opacity:.95}
 .tabs-wrap{background:var(--navy)}
 .tabs{max-width:1320px;margin:0 auto;padding:0 48px;display:flex;gap:40px}
 .tabs a{color:rgba(255,255,255,.55);text-decoration:none;font-size:10px;letter-spacing:2.2px;font-weight:600;padding:18px 0;border-bottom:1px solid transparent}
@@ -49,7 +44,7 @@ body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);-we
 .socio-meta .muted{font-size:11.5px;color:var(--muted);margin-top:8px;line-height:1.5}
 .contact-foot{padding:18px 26px;background:#FCFBF9;border-top:1px solid var(--line)}
 .btn{display:block;text-align:center;padding:13px;font-size:9.5px;letter-spacing:2.5px;text-decoration:none;font-weight:700;background:var(--navy);color:#fff}
-@media(max-width:980px){.header,.tabs,.layout{padding-left:24px;padding-right:24px}.layout{grid-template-columns:1fr}.header{flex-direction:column}.side{position:relative}}
+@media(max-width:980px){.header,.tabs,.layout{padding-left:24px;padding-right:24px}.layout{grid-template-columns:1fr}.header{flex-direction:column}.header-right{align-items:flex-start;text-align:left}.side{position:relative}}
 </style>
 </head>
 <body>
@@ -61,6 +56,8 @@ body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);-we
   </div>
   <div class="header-right">
     <div class="logo">RGMA</div>
+    <!-- LOGO DORADO DEBAJO -->
+    <img src="logo-rgma-dorado.png" alt="RGMA Icono" class="logo-icon">
   </div>
 </header>
 
@@ -74,9 +71,7 @@ body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);-we
 <main class="layout">
   <div id="info">
     <div class="lead">Cobertura completa para la organización familiar y la transmisión ordenada del patrimonio, con foco en prevención y sensibilidad.</div>
-    <div class="copy">
-      <p>El departamento de <b>Derecho de Familia y Sucesiones</b> de RGMA asesora en un amplio espectro de asuntos vinculados a la familia y el patrimonio.</p>
-    </div>
+    <div class="copy"><p>El departamento de <b>Derecho de Familia y Sucesiones</b> de RGMA asesora en un amplio espectro de asuntos vinculados a la familia y el patrimonio.</p></div>
     <div class="services-title">Servicios destacados</div>
     <ul class="list">
       <li><span class="l">a.</span><div><div class="t">Régimen patrimonial del matrimonio</div><div class="d">Comunidad vs separación de bienes. Convenciones matrimoniales y adecuación del régimen.</div></div></li>
