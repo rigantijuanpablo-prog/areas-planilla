@@ -9,12 +9,16 @@
 :root{--navy:#0A1931;--ink:#111827;--muted:#6B7280;--line:#E8E2D6;--paper:#FCFBF9;--gold:#C8B090}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
-.header{max-width:1320px;margin:0 auto;padding:28px 48px 26px;display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid var(--line)}
+.header{max-width:1320px;margin:0 auto;padding:22px 48px 22px;display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid var(--line)}
 .header-left .eyebrow{font-size:9px;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold);font-weight:600}
 .header-left h1{font-family:'Playfair Display';font-size:40px;font-weight:300;color:var(--navy);margin-top:10px;line-height:.95;letter-spacing:-0.5px}
-.header-right{text-align:right;display:flex;flex-direction:column;align-items:flex-end}
-.header-right .logo{font-family:'Playfair Display';font-size:22px;letter-spacing:4px;font-weight:600;color:var(--navy);line-height:1}
-.header-right .logo-icon{margin-top:12px;width:68px;height:auto;display:block;opacity:.95}
+.header-right{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.top-utils{display:flex;align-items:center;gap:18px}
+.lang{display:flex;border:1px solid var(--line);padding:2px;background:#fff}
+.lang button{border:0;background:transparent;font-size:9px;letter-spacing:2px;font-weight:700;padding:6px 10px;cursor:pointer;color:var(--muted);transition:.2s}
+.lang button.active{background:var(--navy);color:#fff}
+.header-right .logo{font-family:'Playfair Display';font-size:20px;letter-spacing:5px;font-weight:600;color:var(--navy);line-height:1;text-align:right}
+.header-right .logo-icon{margin-top:8px;width:52px;height:auto;display:block;opacity:.95}
 .tabs-wrap{background:var(--navy)}
 .tabs{max-width:1320px;margin:0 auto;padding:0 48px;display:flex;gap:40px}
 .tabs a{color:rgba(255,255,255,.55);text-decoration:none;font-size:10px;letter-spacing:2.2px;font-weight:600;padding:18px 0;border-bottom:1px solid transparent}
@@ -44,66 +48,91 @@ body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);-we
 .socio-meta .muted{font-size:11.5px;color:var(--muted);margin-top:8px;line-height:1.5}
 .contact-foot{padding:18px 26px;background:#FCFBF9;border-top:1px solid var(--line)}
 .btn{display:block;text-align:center;padding:13px;font-size:9.5px;letter-spacing:2.5px;text-decoration:none;font-weight:700;background:var(--navy);color:#fff}
-@media(max-width:980px){.header,.tabs,.layout{padding-left:24px;padding-right:24px}.layout{grid-template-columns:1fr}.header{flex-direction:column}.header-right{align-items:flex-start;text-align:left}.side{position:relative}}
+@media(max-width:980px){.header,.tabs,.layout{padding-left:24px;padding-right:24px}.layout{grid-template-columns:1fr}.header{flex-direction:column;gap:18px}.header-right{align-items:flex-start;text-align:left}.side{position:relative}}
 </style>
 </head>
 <body>
 
 <header class="header">
   <div class="header-left">
-    <div class="eyebrow">Área de Práctica · 02</div>
-    <h1>Derecho de Familia<br>y Sucesiones</h1>
+    <div class="eyebrow" data-es="Área de Práctica · 02" data-en="Practice Area · 02">Área de Práctica · 02</div>
+    <h1 data-es="Derecho de Familia<br>y Sucesiones" data-en="Family & Succession<br>Law">Derecho de Familia<br>y Sucesiones</h1>
   </div>
   <div class="header-right">
-    <div class="logo">RGMA</div>
-    <!-- LOGO DORADO DEBAJO -->
-    <img src="isologo-dorado-transparente.png" alt="RGMA Icono" class="logo-icon">
+    <div class="top-utils">
+      <div class="lang">
+        <button id="btn-es" class="active" onclick="setLang('es')">ES</button>
+        <button id="btn-en" onclick="setLang('en')">EN</button>
+      </div>
+      <div class="logo">RGMA</div>
+    </div>
+    <img src="logo-rgma-dorado.png" alt="RGMA Icono" class="logo-icon">
   </div>
 </header>
 
 <div class="tabs-wrap">
   <nav class="tabs">
-    <a href="#info" class="active">INFORMACIÓN GENERAL</a>
-    <a href="#contacto">CONTACTO</a>
+    <a href="#info" class="active" data-es="INFORMACIÓN GENERAL" data-en="OVERVIEW">INFORMACIÓN GENERAL</a>
+    <a href="#contacto" data-es="CONTACTO" data-en="CONTACT">CONTACTO</a>
   </nav>
 </div>
 
 <main class="layout">
   <div id="info">
-    <div class="lead">Cobertura completa para la organización familiar y la transmisión ordenada del patrimonio, con foco en prevención y sensibilidad.</div>
-    <div class="copy"><p>El departamento de <b>Derecho de Familia y Sucesiones</b> de RGMA asesora en un amplio espectro de asuntos vinculados a la familia y el patrimonio.</p></div>
-    <div class="services-title">Servicios destacados</div>
+    <div class="lead" data-es="Cobertura completa para la organización familiar y la transmisión ordenada del patrimonio, con foco en prevención y sensibilidad." data-en="Comprehensive advice for family organization and orderly transfer of wealth, with a focus on prevention and sensitivity.">Cobertura completa para la organización familiar y la transmisión ordenada del patrimonio, con foco en prevención y sensibilidad.</div>
+    
+    <div class="copy">
+      <p data-es="El departamento de <b>Derecho de Familia y Sucesiones</b> de RGMA asesora en un amplio espectro de asuntos vinculados a la familia y el patrimonio." data-en="RGMA's <b>Family and Succession Law</b> department advises on a wide range of family and estate matters.">El departamento de <b>Derecho de Familia y Sucesiones</b> de RGMA asesora en un amplio espectro de asuntos vinculados a la familia y el patrimonio.</p>
+    </div>
+
+    <div class="services-title" data-es="Servicios destacados" data-en="Key Services">Servicios destacados</div>
+    
     <ul class="list">
-      <li><span class="l">a.</span><div><div class="t">Régimen patrimonial del matrimonio</div><div class="d">Comunidad vs separación de bienes. Convenciones matrimoniales y adecuación del régimen.</div></div></li>
-      <li><span class="l">b.</span><div><div class="t">Acuerdos por divorcio</div><div class="d">Vivienda, división de bienes, compensaciones, alimentos, cuidado personal y comunicación.</div></div></li>
-      <li><span class="l">c.</span><div><div class="t">Juicios de divorcio y liquidación</div><div class="d">Extinción de comunidad, medidas cautelares y conflictos complejos.</div></div></li>
-      <li><span class="l">d.</span><div><div class="t">Convivencia</div><div class="d">Pactos de convivencia y protección de vivienda familiar.</div></div></li>
-      <li><span class="l">e.</span><div><div class="t">Planificación sucesoria</div><div class="d">Donaciones con reserva, testamentos y partición anticipada.</div></div></li>
-      <li><span class="l">f.</span><div><div class="t">Empresa familiar</div><div class="d">Protocolo familiar y continuidad generacional.</div></div></li>
-      <li><span class="l">g.</span><div><div class="t">Sucesiones</div><div class="d">Nacionales e internacionales.</div></div></li>
-      <li><span class="l">h.</span><div><div class="t">Capacidad y autoprotección</div><div class="d">Directivas anticipadas y mandatos de autoprotección.</div></div></li>
-      <li><span class="l">i.</span><div><div class="t">Filiación</div><div class="d">Acciones de filiación y protección integral.</div></div></li>
+      <li><span class="l">a.</span><div><div class="t" data-es="Régimen patrimonial del matrimonio" data-en="Matrimonial Property Regime">Régimen patrimonial del matrimonio</div><div class="d" data-es="Comunidad vs separación de bienes. Convenciones matrimoniales y adecuación del régimen." data-en="Community vs separation of property. Prenuptial agreements and regime amendments.">Comunidad vs separación de bienes. Convenciones matrimoniales y adecuación del régimen.</div></div></li>
+      <li><span class="l">b.</span><div><div class="t" data-es="Acuerdos por divorcio" data-en="Divorce Agreements">Acuerdos por divorcio</div><div class="d" data-es="Vivienda, división de bienes, compensaciones, alimentos, cuidado personal y comunicación." data-en="Use of family home, asset division, compensations, support, custody and visitation.">Vivienda, división de bienes, compensaciones, alimentos, cuidado personal y comunicación.</div></div></li>
+      <li><span class="l">c.</span><div><div class="t" data-es="Juicios de divorcio y liquidación" data-en="Divorce Litigation">Juicios de divorcio y liquidación</div><div class="d" data-es="Extinción de comunidad, medidas cautelares y conflictos complejos." data-en="Dissolution of community property, injunctions and complex disputes.">Extinción de comunidad, medidas cautelares y conflictos complejos.</div></div></li>
+      <li><span class="l">d.</span><div><div class="t">Convivencia</div><div class="d" data-es="Pactos de convivencia y protección de vivienda familiar." data-en="Cohabitation agreements and family home protection.">Pactos de convivencia y protección de vivienda familiar.</div></div></li>
+      <li><span class="l">e.</span><div><div class="t" data-es="Planificación sucesoria" data-en="Succession Planning">Planificación sucesoria</div><div class="d" data-es="Donaciones con reserva, testamentos y partición anticipada." data-en="Donations with retained usufruct, wills and anticipated partition.">Donaciones con reserva, testamentos y partición anticipada.</div></div></li>
+      <li><span class="l">f.</span><div><div class="t" data-es="Empresa familiar" data-en="Family Business">Empresa familiar</div><div class="d" data-es="Protocolo familiar y continuidad generacional." data-en="Family protocol and generational continuity.">Protocolo familiar y continuidad generacional.</div></div></li>
+      <li><span class="l">g.</span><div><div class="t">Sucesiones</div><div class="d" data-es="Nacionales e internacionales." data-en="Domestic and cross-border estates.">Nacionales e internacionales.</div></div></li>
+      <li><span class="l">h.</span><div><div class="t" data-es="Capacidad y autoprotección" data-en="Capacity & Self-Protection">Capacidad y autoprotección</div><div class="d" data-es="Directivas anticipadas y mandatos de autoprotección." data-en="Advance directives and self-protection mandates.">Directivas anticipadas y mandatos de autoprotección.</div></div></li>
+      <li><span class="l">i.</span><div><div class="t">Filiación</div><div class="d" data-es="Acciones de filiación y protección integral." data-en="Filiation actions and comprehensive protection.">Acciones de filiación y protección integral.</div></div></li>
     </ul>
   </div>
 
   <aside class="side" id="contacto">
     <div class="contact-card">
-      <div class="contact-head"><span>CONTACTO</span><i>SOCIO</i></div>
+      <div class="contact-head"><span data-es="CONTACTO" data-en="CONTACT">CONTACTO</span><i data-es="SOCIO" data-en="PARTNER">SOCIO</i></div>
       <div class="socio">
         <div class="socio-photo"><img src="socio-familia.jpg" alt="Socio RGMA"></div>
         <div>
           <div class="socio-name">Dr. [Nombre Apellido]</div>
-          <div class="socio-role">Socio · Familia y Sucesiones</div>
+          <div class="socio-role" data-es="Socio · Familia y Sucesiones" data-en="Partner · Family & Succession">Socio · Familia y Sucesiones</div>
           <div class="socio-meta">
             <div><a href="mailto:familia@rgma.com.ar">familia@rgma.com.ar</a></div>
             <div class="muted">T° XX F° XX CPACF<br>+54 11 XXXX-XXXX</div>
           </div>
         </div>
       </div>
-      <div class="contact-foot"><a href="#consulta" class="btn">CONTACTAR AL SOCIO</a></div>
+      <div class="contact-foot"><a href="#consulta" class="btn" data-es="CONTACTAR AL SOCIO" data-en="CONTACT PARTNER">CONTACTAR AL SOCIO</a></div>
     </div>
   </aside>
 </main>
+
+<script>
+function setLang(lang){
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-es]').forEach(el=>{
+    const html = el.getAttribute('data-'+lang);
+    if(html) el.innerHTML = html;
+  });
+  document.getElementById('btn-es').classList.toggle('active', lang==='es');
+  document.getElementById('btn-en').classList.toggle('active', lang==='en');
+  localStorage.setItem('rgma_lang', lang);
+}
+const saved = localStorage.getItem('rgma_lang');
+if(saved) setLang(saved);
+</script>
 
 </body>
 </html>
